@@ -30,10 +30,10 @@ Dosya adı                       Açıklama                                    K
  Detaylı açıklama ve örnek promptlar için lütfen "AI.md" dosyasını inceleyin.
 
 Oyun Görselleri:
-1)![resim1]"resimler/ss1.png"
-2)"resimler/ss2.png"
-3)"resimler/ss3.png"
-4)"resimler/ss4.png"
+1) ![ss1](https://raw.githubusercontent.com/ferideyalcinkaya/ferideyalcinkaya.github.io/main/ss1.png)
+2) ![ss2](https://raw.githubusercontent.com/ferideyalcinkaya/ferideyalcinkaya.github.io/main/ss2.png)
+3) ![ss3](https://raw.githubusercontent.com/ferideyalcinkaya/ferideyalcinkaya.github.io/main/ss3.png)
+4) ![ss4](https://raw.githubusercontent.com/ferideyalcinkaya/ferideyalcinkaya.github.io/main/ss4.png)
 
  Oynanış Videosu:
 
