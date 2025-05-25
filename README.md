@@ -30,7 +30,7 @@ Dosya adı                       Açıklama                                    K
  Detaylı açıklama ve örnek promptlar için lütfen "AI.md" dosyasını inceleyin.
 
 Oyun Görselleri:
-1)"resimler/ss1.png"
+1)![resim1]"resimler/ss1.png"
 2)"resimler/ss2.png"
 3)"resimler/ss3.png"
 4)"resimler/ss4.png"
