@@ -40,3 +40,11 @@ Oyun Görselleri:
 Aşağıdaki bağlantıdan oyunun oynanış videosunu izleyebilirsiniz:  
 🔗 [YouTube'da İzle](https://www.youtube.com/watch?v=urJfDhYBXPc)
  Hazırlayan: Feride Saygı Yalçınkaya
+  🔗 Canlı Oyun Linki
+Oyunu bu bağlantıdan oynayabilirsiniz:  
+👉 [https://ferideyalcinkaya.github.io/](https://ferideyalcinkaya.github.io/)
+
+ 💾 GitHub Reposu
+Proje dosyalarının tamamına buradan ulaşabilirsiniz:  
+👉 [https://github.com/ferideyalcinkaya/ferideyalcinkaya.github.io](https://github.com/ferideyalcinkaya/ferideyalcinkaya.github.io)
+
