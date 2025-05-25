@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Flower Game</title>
+  <link rel="stylesheet" href="game.css">
+  
+</head>
+<body>
+
+  <div id="gameContainer">
+
+    <!-- Giriş Müziği -->
+    <audio id="introMusic" src="intromusic.mp3"></audio>
+
+    <!--Oyun ici Müzikler-->
+    <audio id="waterSound" src="water.mp3" loop></audio>
+    <audio id="deathSound" src="death.mp3" loop></audio>
+
+    <!--Seviye Gecis Müzigi-->
+    <audio id="goodJobSound" src="clap.mp3"></audio>
+
+    <!-- Zorunlu Başlat Butonu -->
+    <div id="startOverlay" style="
+      position:fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:9999;
+    ">
+      <button id="startButton" style="font-size:2rem;">BAŞLAT</button>
+    </div>
+
+    <!-- Arka Plan -->
+    <canvas id="backgroundCanvas" width="900" height="600"></canvas>
+
+    <!-- Ana Menü İcerigi-->
+    <div class="ui hidden" id="mainMenu">
+      <div class="title">Çiçek Oyunu</div>
+      <button id="playButton">PLAY</button>
+      <div class="how-to-play">Nasıl Oynanır?</div>
+    </div>
+
+    <!-- Nasıl Oynanır kutusu -->
+    <div id="howToPlayPopup" class="popup hidden"> 
+      <h2>Nasıl Oynanır?</h2>
+      <ul>
+        <li><b>Amaç:</b> Çiçekleri istenen hale getirmek.</li>
+        <li><b>Hareket:</b> Yön tuşlarıyla (← →) oyuncuyu hareket ettirin.</li>
+        <li><b>Haklar:</b> Verilen haklar üzerinde yalnızca sağa doğru ilerlenir. Her hak sadece bir kez kullanılır.</li>
+        <li>Çiçekler üzerinde sağ ve sola hareket edilebilir.</li>
+        <li>Hedef buket ile eşleşince seviye geçilir!</li>
+      </ul>
+      <button id="closeHowTo">Kapat</button>
+    </div>
+
+    <!-- Oyun Ekranı -->
+    <div id="gameScreen" class="hidden">
+      <div id="gameInfo">
+        <h2>Oyun Başlıyor!</h2>
+        <div id="levelIndicator">Level 1</div>
+        <div id="coinCounter">💰 0</div> <!-- Coin Sayacı -->
+      </div>
+
+      <div id="targetDisplay">
+        <strong>Hedef</strong>
+        <div id="targetBubble"></div>
+      </div>
+
+      <div id="playerFlowers"></div>
+      <div id="rightsContainer"></div>
+    </div>
+
+    <!-- Level geçiş efekti -->
+    <div id="levelTransition" class="hidden">Level Tamamlandı! 🎉</div>
+
+  </div> 
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById("startButton").addEventListener("click", () => {
+      const introMusic = document.getElementById("introMusic");
+      introMusic.play().catch(err => console.log("Müzik çalınamadı:", err));
+      document.getElementById("startOverlay").style.display = "none";
+      document.getElementById("mainMenu").classList.remove("hidden");
+    });
+  </script>
+  <script src="game.js"></script> <!--Js dahil edildi.-->
+  <div id="coinCounter" class="hidden">💰 0</div>
+
+  <!-- Oyun Sonu Mağazası -->
+   
+  <div id="shopOverlay" class="hidden" style="
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+">
+  <div style="
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  ">
+    <h2>Mağaza</h2>
+    <p>Kalan coin: <span id="shopCoins">0</span></p>
+
+    <div>
+      <label><input type="checkbox" class="shopOption" data-name="Çiçek" data-cost="40">  Çiçek (40)</label><br>
+      <label><input type="checkbox" class="shopOption" data-name="Su" data-cost="20">  Su (25)</label><br>
+      <label><input type="checkbox" class="shopOption" data-name="Elbise" data-cost="30">  Elbise (30)</label>
+
+    </div>
+
+    <button id="shopConfirmButton" style="margin-top: 20px; font-size: 16px;">Satın Al</button>
+    <p id="shopResult" class="hidden" style="margin-top: 15px; font-weight: bold;"></p>
+
+  </div>
+</div>
+
+
+</body>
+</html>
